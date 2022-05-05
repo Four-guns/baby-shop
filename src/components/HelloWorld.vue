@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { useStore } from '../store';
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+const useStoreData = useStore();
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <h2>{{useStoreData.formatName}}</h2>
   <p class="title">
     This is the first item from three guns
     <div class="first">let`s go</div>
