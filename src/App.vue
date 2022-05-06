@@ -5,6 +5,7 @@
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <div>测试一下ci</div>
   <router-view></router-view>
 </template>
 
