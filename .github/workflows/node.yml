@@ -8,7 +8,7 @@ on:
     - published
 
 jobs:
-  checkout:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: 检查分支
@@ -31,7 +31,7 @@ jobs:
           npm run build
 
       # 打包镜像推送到阿里云容器镜像服务
-      - name: Build the Docker image
+      - name: 构建容器镜像
         run: |
           docker login --username=${{ secrets.DOCKER_USERNAME }}  ccr.ccs.tencentyun.com --password=${{ secrets.DOCKER_PASSWORD }}
           docker build -t baby-shop:latest .
@@ -42,5 +42,5 @@ jobs:
         with:
           host: ${{ secrets.HOST }} 
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: cd ~ && sh baby-shop-deploy.sh ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }}
