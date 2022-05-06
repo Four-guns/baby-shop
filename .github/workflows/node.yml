@@ -40,7 +40,8 @@ jobs:
       - name: ssh docker login # 使用appleboy/ssh-action@master登录服务器执行拉取镜像脚本，服务器ip、用户名、密码配置方式同容器镜像服务配置方式一样
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }} 
-          username: ${{ secrets.USERNAME }}
+          host: ${{ secrets.HOST }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           script: cd ~ && sh baby-shop-deploy.sh ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }}
