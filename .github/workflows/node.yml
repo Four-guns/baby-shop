@@ -43,5 +43,4 @@ jobs:
           host: ${{ secrets.HOST }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
           script: cd ~ && sh baby-shop-deploy.sh ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }}
