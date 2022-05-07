@@ -1,8 +1,12 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import Login from './modules/login'
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/baobao'),
   routes: [
+    {
+      path:'/',
+      redirect: 'login'
+    },
     Login
   ]
 })

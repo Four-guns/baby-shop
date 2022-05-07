@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-export const useStore = defineStore('mainStore',{
+export const useStore = defineStore('userStore',{
   state: () => ({
     name: 'dd',
     mobileNo: '15684898823'
@@ -12,6 +12,16 @@ export const useStore = defineStore('mainStore',{
   actions: {
     setNameData (data:any) {
       this.$state = data
+    }
+  }
+});
+export const commonStore = defineStore('commonStore',{
+  state: () => ({
+    isLoading: false
+  }),
+  actions: {
+    setLoadingState (payload:boolean) {
+      this.$state.isLoading = payload
     }
   }
 });
