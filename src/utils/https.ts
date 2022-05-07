@@ -54,3 +54,4 @@ https.interceptors.response.use((response: AxiosResponse) => {
   hideLoading();
   return Promise.reject(error)
 })
+export default https;
