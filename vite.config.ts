@@ -9,6 +9,13 @@ export default defineConfig({
     vue(),
     styleImport({
       resolves: [VantResolve()],
+      libs: [
+        {
+          libraryName: 'vant',
+          esModule: true,
+          resolveStyle: (name) => `../es/${name}/style`
+        }
+       ]
     }),
   ],
   resolve:{
