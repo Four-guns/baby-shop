@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 export const useStore = defineStore('userStore',{
   state: () => ({
-    name: 'dd',
+    name: 'ddd',
     mobileNo: '15684898823'
   }),
   getters: {
