@@ -39,7 +39,7 @@ a {
 }
 
 label {
-  margin: 0 0.5em;
+  margin: 0 20px;
   font-weight: bold;
 }
 
@@ -50,9 +50,9 @@ code {
   color: #304455;
 }
 .title {
-  font-size: 1.5em;
+  font-size: 20px;
   .first {
-    color: #f00;
+    color: $themeColor;
   }
 }
 </style>
