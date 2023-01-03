@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Toast } from 'vant'
+import { Toast } from 'vant';
+import 'vant/es/toast/style';
 import { commonStore } from '@/store';
 import { watchEffect } from 'vue';
 const useCommonStore = commonStore();

@@ -1,11 +1,6 @@
 <script setup lang="ts">
-import { 
-  Field as vanField,
-  CellGroup as vanCellGroup,
-  Button as vanButton,
-  Form as vanForm,
-  Toast
-} from 'vant';
+import { Toast } from 'vant';
+import 'vant/es/toast/style';
 import { ref } from 'vue';
 import { userLogin } from '@/api/login';
 
@@ -58,7 +53,7 @@ const onSubmit = () => {
   .loginTitle {
     margin-bottom: 40px;
   }
-  ::v-deep .van-cell__title.van-field__label {
+  :v-deep .van-cell__title.van-field__label {
     font-size: 30px;
     color:$themeColor;
   }
