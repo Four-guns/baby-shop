@@ -1,18 +1,30 @@
 <script setup lang="ts">
-import { Toast } from 'vant';
+// Toast
+import { showLoadingToast,closeToast } from 'vant';
 import 'vant/es/toast/style';
+// // Dialog
+// import { showDialog } from 'vant';
+// import 'vant/es/dialog/style';
+
+// // Notify
+// import { showNotify } from 'vant';
+// import 'vant/es/notify/style';
+
+// // ImagePreview
+// import { showImagePreview } from 'vant';
+// import 'vant/es/image-preview/style';
 import { commonStore } from '@/store';
 import { watchEffect } from 'vue';
 const useCommonStore = commonStore();
 watchEffect(() => {
   if(useCommonStore.isLoading) {
-    Toast.loading({
+    showLoadingToast({
       message: '加载中...',
       forbidClick: true,
       duration: 0
     });
   } else {
-    Toast.clear();
+    closeToast();
   }
 })
 </script>

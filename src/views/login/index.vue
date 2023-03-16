@@ -53,7 +53,7 @@ const onSubmit = () => {
   .loginTitle {
     margin-bottom: 40px;
   }
-  :v-deep .van-cell__title.van-field__label {
+  :deep(.van-cell__title.van-field__label) {
     font-size: 30px;
     color:$themeColor;
   }
